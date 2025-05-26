@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Correspondente Bancária</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #000;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      color: #ff6a00;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    nav {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #ff6a00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #ff6a00;
+      margin-bottom: 1.5rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .service-card {
+      background-color: #1c1c1c;
+      border-left: 4px solid #ff6a00;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(255, 106, 0, 0.5);
+    }
+    .service-card h3 {
+      margin: 0 0 0.5rem;
+      color: #fff;
+    }
+    .service-card p {
+      color: #ccc;
+    }
+    .contact {
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact a,
+    .btn-download {
+      background-color: #ff6a00;
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .contact a:hover,
+    .btn-download:hover {
+      background-color: #e05a00;
+    }
+    form {
+      background-color: #1c1c1c;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #ff6a00;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #ff6a00;
+    }
+    button[type="submit"] {
+      background-color: #ff6a00;
+      color: #000;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #e05a00;
+    }
+    footer {
+      background-color: #000;
+      color: #888;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seu Nome Aqui</h1>
+    <p>Correspondente Bancária Especializada em FGTS, INSS e CLT</p>
+  </header>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="servicos">
+    <h2 class="section-title">Serviços Oferecidos</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Antecipação do FGTS</h3>
+        <p>Liberação rápida com segurança e as melhores condições. Atendimento direto pelo WhatsApp.</p>
+      </div>
+      <div class="service-card">
+        <h3>Empréstimo INSS</h3>
+        <p>Crédito consignado com taxas reduzidas para aposentados e pensionistas.</p>
+      </div>
+      <div class="service-card">
+        <h3>Crédito para CLT</h3>
+        <p>Opções de crédito pessoal para trabalhadores com carteira assinada. Consulte sem compromisso.</p>
+      </div>
+      <div class="service-card">
+        <h3>Atendimento Personalizado</h3>
+        <p>Consultoria individual para garantir o melhor produto para o seu perfil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2 class="section-title">Entre em Contato</h2>
+    <p>Fale comigo agora mesmo e tire suas dúvidas ou simule seu crédito.</p>
+    <a href="https://wa.me/11946699887" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+    <br/>
+    <a href="curriculo.pdf" class="btn-download" download>📄 Baixar Currículo (PDF)</a>
+
+    <form id="contactForm" novalidate>
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required placeholder="Aline Sampaio" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Aline.monetize@gmail.com" />
+      
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Escreva sua mensagem aqui"></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage" style="margin-top:1rem;"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 - Aline Corbans . Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Validação simples
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        formMessage.style.color = 'orange';
+        formMessage.textContent = 'Por favor, preencha todos os campos.';
+        return;
+      }
+
+      // Simulação de envio - aqui você pode integrar com backend ou email service
+      formMessage.style.color = '#4CAF50';
+      formMessage.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+      form.reset();
+    });
+  </script>
+
+</body><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Correspondente Bancária</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #000;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      color: #ff6a00;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    nav {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #ff6a00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      color: #ff6a00;
+      margin-bottom: 1.5rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .service-card {
+      background-color: #1c1c1c;
+      border-left: 4px solid #ff6a00;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(255, 106, 0, 0.5);
+    }
+    .service-card h3 {
+      margin: 0 0 0.5rem;
+      color: #fff;
+    }
+    .service-card p {
+      color: #ccc;
+    }
+    .contact {
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact a,
+    .btn-download {
+      background-color: #ff6a00;
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .contact a:hover,
+    .btn-download:hover {
+      background-color: #e05a00;
+    }
+    form {
+      background-color: #1c1c1c;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: #ff6a00;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #ff6a00;
+    }
+    button[type="submit"] {
+      background-color: #ff6a00;
+      color: #000;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #e05a00;
+    }
+    footer {
+      background-color: #000;
+      color: #888;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seu Nome Aqui</h1>
+    <p>Correspondente Bancária Especializada em FGTS, INSS e CLT</p>
+  </header>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="servicos">
+    <h2 class="section-title">Serviços Oferecidos</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Antecipação do FGTS</h3>
+        <p>Liberação rápida com segurança e as melhores condições. Atendimento direto pelo WhatsApp.</p>
+      </div>
+      <div class="service-card">
+        <h3>Empréstimo INSS</h3>
+        <p>Crédito consignado com taxas reduzidas para aposentados e pensionistas.</p>
+      </div>
+      <div class="service-card">
+        <h3>Crédito para CLT</h3>
+        <p>Opções de crédito pessoal para trabalhadores com carteira assinada. Consulte sem compromisso.</p>
+      </div>
+      <div class="service-card">
+        <h3>Atendimento Personalizado</h3>
+        <p>Consultoria individual para garantir o melhor produto para o seu perfil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2 class="section-title">Entre em Contato</h2>
+    <p>Fale comigo agora mesmo e tire suas dúvidas ou simule seu crédito.</p>
+    <a href="https://wa.me/11946699887" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+    <br/>
+
+    <form id="contactForm" novalidate>
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required placeholder="Aline Sampaio" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Aline.monetize@gmail.com" />
+      
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Escreva sua mensagem aqui"></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage" style="margin-top:1rem;"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 - Aline Corbans . Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Validação simples
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !message) {
+        formMessage.style.color = 'orange';
+        formMessage.textContent = 'Por favor, preencha todos os campos.';
+        return;
+      }
+
+      // Simulação de envio - aqui você pode integrar com backend ou email service
+      formMessage.style.color = '#4CAF50';
+      formMessage.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+      form.reset();index.html
+    });
+  </script>
+
+</body>
+</html>
+</html>
